@@ -17,26 +17,30 @@ public class PlayerMovement : MonoBehaviour
     {
 
        
-
+        //Top
         if(Input.GetKey("w") == true)
         {
             //Time.deltaTime basically makes it so that every computer moves the cube at the same uniform speed
             rb.AddForce(0, 0, forwardForce * Time.deltaTime);    
         }
-        if (Input.GetKey("a") == true)
-        {
-            
-            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
-        }
-        if (Input.GetKey("d") == true)
-        {
-           
-            rb.AddForce(forwardForce * Time.deltaTime, 0, 0);
-        }
+        //Bottom
         if (Input.GetKey("s") == true)
         {
             
-            rb.AddForce(0, 0, -sidewaysForce * Time.deltaTime);
+            rb.AddForce(0, 0, -forwardForce * Time.deltaTime);
+        }
+
+        //Left
+        if (Input.GetKey("a") == true)
+        {
+
+            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+        //Right
+        if (Input.GetKey("d") == true)
+        {
+
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
     }
