@@ -43,5 +43,10 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
+        //If the player gets below -20 on the Y axis display game over
+        if(rb.position.y < -5f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }

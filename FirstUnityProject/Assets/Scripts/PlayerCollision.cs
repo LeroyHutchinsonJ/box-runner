@@ -14,6 +14,8 @@ public class PlayerCollision : MonoBehaviour
         {
             //Turn off the player movement
             movement.enabled = false;
+
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
