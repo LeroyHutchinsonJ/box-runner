@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 
@@ -8,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     public Rigidbody rb;
+
+
     //Makes a variable to contain the forward force
     public float forwardForce = 1000f;
     public float sidewaysForce = 600f;

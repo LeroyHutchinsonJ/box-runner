@@ -5,6 +5,12 @@ public class GameManager : MonoBehaviour
 {
     bool HasGameEnded = false;
     public float GameEndDelay;
+
+    public void CompleteLevel()
+    {
+        Debug.Log("Level Won");
+    }
+
    public void EndGame()
     {
         if(HasGameEnded == false)
