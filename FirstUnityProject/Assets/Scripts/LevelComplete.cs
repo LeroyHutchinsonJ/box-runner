@@ -6,7 +6,10 @@ public class LevelComplete : MonoBehaviour
    public void LoadNextLevel()
     {
         //This will load the very next scene in the build index
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
     }
 }
